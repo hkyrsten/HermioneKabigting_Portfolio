@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="EN-CA">
+<head>
+  <meta charset="UTF-8">
+  <title>H's Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Climate+Crisis&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      color: #FDA9E4;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      background: #000;
+      padding-top: 110px;
+    }
+
+    .climate {
+      font-family: "Climate Crisis", sans-serif;
+      font-weight: 400;
+      font-variation-settings: "YEAR" 1979;
+    }
+
+    .ballet {
+      font-family: "Ballet", cursive;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 110px;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 0 40px; 
+      box-sizing: border-box;
+      background: rgba(0,0,0,0.6); 
+      backdrop-filter: blur(6px);
+      z-index: 9999; 
+    }
+
+    .logo {
+      font-family: "Ballet", cursive;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      cursor: default;
+      color: #FDA9E4;
+      padding-left: 15px;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-right a {
+      color: #FDA9E4;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    section {
+      min-height: 700px;
+      padding: 160px 0 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #section0 {
+      position: relative;
+      background-image: url('background.jpeg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      padding-top: 60px;
+      max-width: none;
+      margin: 0;
+    }
+
+    #section0::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.78); 
+    }
+
+    #section0 * {
+      position: relative;
+      z-index: 1;
+    }
+
+    #section0 > * {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #section1 {
+      position: relative;
+      background-image: url('me.jpeg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      padding: 50px 0 30px;
+      max-width: none;
+      margin: 0;
+    }
+
+    #section1::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.78); 
+    }
+
+    #section1 * {
+      position: relative;
+      z-index: 1;
+    }
+
+    #section1 > * {
+      text-align: center;
+      max-width: 1200px;
+      font-size: 145px;
+      line-height: 0.9; 
+      margin-left: 150px;
+      position: center;
+      min-height: 10%;
+    }
+
+    h1 {
+      font-size: 145px;
+      line-height: 0.9; 
+      margin: 0;
+    }
+
+    h2 { 
+      font-size: 50px; 
+      margin-top: 0; 
+    }
+	
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    .p-card {
+      background: #fff;
+      color: #000;
+      border-radius: 22px;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 10px 10px 0 0 #FDA9E4;
+    }
+
+    .p-card .text-box {
+      padding: 40px;
+      width: 60%;
+    }
+
+    .p-card strong {
+      color: #FDA9E4;
+      font-size: 28px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .p-card img {
+      width: 40%;
+      object-fit: cover;
+    }
+
+    .side-image-section {
+      position: relative;
+      min-height: 700px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 0;
+      max-width: none;
+      margin: 0;
+    }
+
+    .side-image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .side-image-content {
+      padding: 100px;
+      z-index: 2;
+      text-align: left;
+      color: #FDA9E4;
+    }
+
+    .side-image-content h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .side-image-content p {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+/*
+Code copied from: [https://www.youtube.com/watch?v=2O8pkybH6po&t=468s]
+Author: [Bro Code]
+Name: [Learn HTML forms in 8 minutes 📝]
+Description: [learning how to make hmtl form structure that actually works and can input text within the box]
+Date retrieved: [December 1, 2025] */
+    #section7 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh; 
+      padding: 50px 20px;
+      text-align: center;
+    }
+/*
+Code copied from: [https://www.youtube.com/watch?v=2O8pkybH6po&t=468s]
+Author: [Bro Code]
+Name: [Learn HTML forms in 8 minutes 📝]
+Description: [learning how to make hmtl form structure that actually works and can input text within the box]
+Date retrieved: [December 1, 2025] */
+    #section7 form {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; 
+      background: #111;
+      padding: 40px;
+      border-radius: 15px;
+      border: 2px solid #FDA9E4;
+    }
+/*
+Code copied from: [https://www.youtube.com/watch?v=2O8pkybH6po&t=468s]
+Author: [Bro Code]
+Name: [Learn HTML forms in 8 minutes 📝]
+Description: [learning how to make hmtl form structure that actually works and can input text within the box]
+Date retrieved: [December 1, 2025] */
+    #section7 input,
+    #section7 textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #FDA9E4;
+      background: #000;
+      color: #FDA9E4;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+/*
+Code copied from: [https://www.youtube.com/watch?v=2O8pkybH6po&t=468s]
+Author: [Bro Code]
+Name: [Learn HTML forms in 8 minutes 📝]
+Description: [learning how to make hmtl form structure that actually works and can input text within the box]
+Date retrieved: [December 1, 2025] */
+    #section7 button {
+      padding: 15px;
+      background: #FDA9E4;
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+/*
+Code copied from: [https://www.youtube.com/watch?v=2O8pkybH6po&t=468s]
+Author: [Bro Code]
+Name: [Learn HTML forms in 8 minutes 📝]
+Description: [learning how to make hmtl form structure that actually works and can input text within the box]
+Date retrieved: [December 1, 2025] */
+    #section7 button:hover {
+      background: #ff8be6;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">H</div>
+  <div class="nav-right">
+    <a href="#section0">HOME</a>
+    <a href="#section2">PROJECTS</a>
+    <a href="#section7">CONTACT ME</a>
+  </div>
+</nav>
+
+<section id="section0">
+  <h1 class="climate">PORTFOLIO</h1>
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 100px;">
+    <div style="max-width: 500px;">
+      <p style="font-size:22px; margin: 100px 0 0 0;">
+        Welcome to my creative space –
+      </p>
+      <p style="font-size:22px; margin: 0;">
+        Where you'll see the art world through my eyes. Whether it's photography, fashion, design, UX/UI, I can do it all!
+      </p>
+    </div>
+    <div class="ballet" style="font-size:40px; margin: 100px 0 0 0;">
+      Hermione K
+    </div>
+  </div>
+</section>
+
+<section id="section1">
+  <h2 class="climate" style="text-align: center; margin-bottom: 0;">ABOUT</h2>
+  <h3 class="ballet" style="font-size: 100px; margin: 20px 0 300px 100px; text-align: center;">Me</h3>
+  <p style="font-size:22px; max-width:650px; text-align: center; margin-left: auto; margin-right: auto;">
+   Yes! Hermione like from Harry Potter! I am a multi-disciplinary creative with a deep love for design. Specializing in photography, design, and especially fashion! My passion for design comes from creativity.
+  </p>
+</section>
+
+<section id="section2" style="text-align:center;">
+  <h2 class="climate">Projects</h2>
+
+  <div class="project-grid">
+
+    <a href="#section3" style="text-decoration:none; color:inherit;">
+      <div class="p-card">
+        <div class="text-box">
+          <strong>PHOTOGRAPHY</strong>
+          <p>A gallery of expressive photographs.</p>
+          <em>2020 – present</em>
+        </div>
+        <img src="photography.jpeg" />
+      </div>
+    </a>
+
+    <a href="#section4" style="text-decoration:none; color:inherit;">
+      <div class="p-card">
+        <div class="text-box">
+          <strong>BRANDING &amp; MARKETING</strong>
+          <p>A creation of a logo design for a tote bag brand, exploring different ways of marketing the product</p>
+          <em> October 2024</em>
+        </div>
+        <img src="marketing.jpeg" />
+      </div>
+    </a>
+
+    <a href="#section5" style="text-decoration:none; color:inherit;">
+      <div class="p-card">
+        <div class="text-box">
+          <strong>WATERCOLOUR PAINTING</strong>
+          <p>Expressing emotions through the flow of watercolour.</p>
+          <em>2020 – present</em>
+        </div>
+        <img src="painting.jpeg" />
+      </div>
+    </a>
+
+    <a href="#section6" style="text-decoration:none; color:inherit;">
+      <div class="p-card">
+        <div class="text-box">
+          <strong>PROTOTYPING</strong>
+          <p>Re-designing a website UI for an arcade shop "UniClaw."</p>
+          <em>November 2025</em>
+        </div>
+        <img src="prototyping.jpeg" />
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- SECTION 3 — PHOTOGRAPHY -->
+<section id="section3" class="side-image-section">
+  <div class="side-image-content">
+    <h2 class="climate">Photography</h2>
+    <p>
+      A collection of expressive photographs capturing emotion, light, and storytelling.
+    </p>
+  </div>
+  <img src="photography.jpeg">
+</section>
+
+<!-- SECTION 4 — BRANDING -->
+<section id="section4" class="side-image-section">
+  <div class="side-image-content">
+    <h2 class="climate">Branding & Marketing</h2>
+    <p>
+      This custom logo design explores personal branding and visual identity.
+    </p>
+  </div>
+  <img src="marketing.jpeg">
+</section>
+
+<!-- SECTION 5 — WATERCOLOUR -->
+<section id="section5" class="side-image-section">
+  <div class="side-image-content">
+    <h2 class="climate">Watercolour Painting</h2>
+    <p>
+      A series of watercolour artworks symbolising emotion, movement, and fluidity.
+    </p>
+  </div>
+  <img src="painting.jpeg">
+</section>
+
+<!-- SECTION 6 — PROTOTYPING -->
+<section id="section6" class="side-image-section">
+  <div class="side-image-content">
+    <h2 class="climate">Prototyping</h2>
+    <p>
+      A UI/UX redesign concept for an arcade store "UniClaw," focusing on modern interaction design.
+    </p>
+  </div>
+  <img src="prototyping.jpeg">
+</section>
+
+<!-- SECTION 7 — CONTACT -->
+<!--
+Code copied from: [https://www.youtube.com/watch?v=2O8pkybH6po&t=468s]
+Author: [Bro Code]
+Name: [Learn HTML forms in 8 minutes 📝]
+Description: [learning how to make hmtl form structure that actually works and can input text within the box]
+Date retrieved: [December 1, 2025]
+-->
+<section id="section7">
+  <h2 class="climate" style="margin-bottom:40px;">Let's Connect</h2>
+  <form>
+    <label>First Name:</label>
+    <input type="text" placeholder="Enter...">
+
+    <label>Last Name:</label>
+    <input type="text" placeholder="Enter...">
+
+    <label>Email:</label>
+    <input type="email" placeholder="Enter...">
+
+    <label>Question:</label>
+    <input type="text" placeholder="Enter...">
+
+    <label>Comment:</label>
+    <textarea rows="6" placeholder="Enter..."></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+  <p style="margin-top:30px; font-size:20px;">Email: Hermionekabigting@gmail.com</p>
+</section>
+
+</body>
+</html>
