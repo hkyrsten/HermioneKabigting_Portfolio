@@ -24,10 +24,26 @@
     font-weight: 400;
   }
   
-  .ballet{
+  .ballet {
     font-family: "Ballet", cursive;
+  } 
+/*
+Code copied from: [https://www.w3schools.com/cssref/css3_pr_backdrop-filter.php]
+Author: [W3Schools]
+Name: [CSS backdrop-filter Property]
+Description: [blurring the background ]
+Date retrieved: [December 3, 2025] */
+  .topnav {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    z-index: 10000;
   }
-  
   
   
   
